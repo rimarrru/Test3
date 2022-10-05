@@ -1,0 +1,24 @@
+n = int(input("Число: "))
+max = n % 10
+min = n% 10
+k = 0
+maxi = k
+mini = k
+while n>0:
+  i = n % 10
+  k += 1
+  if i >= max:
+    max = i
+    maxi = k
+  elif i <= min:
+    min = i
+    mini = k
+  n = n//10
+print("Максимум: ", max)
+print("Минимум: ", min)
+if maxi > mini:
+  print("Максимальная цифра расположена левее.")
+elif maxi < mini:
+  print("Минимальная цифра расположена левее.")
+else:
+  print("Цифры совпадают.")
